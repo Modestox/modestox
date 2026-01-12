@@ -1,0 +1,19 @@
+{
+    "name": "modestox/modestox",
+    "description": "Safe and minimal open-source e-commerce platform.",
+    "type": "project",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Modestox Team"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modestox\\": "src/Modestox/"
+        }
+    }
+}
