@@ -21,3 +21,6 @@
 
 ## 🚀 Getting Started
 *The project is currently in the architectural design phase.*
+
+```bash
+git clone [https://github.com/Modestox/modestox.git](https://github.com/Modestox/modestox.git)
