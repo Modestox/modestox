@@ -1,0 +1,24 @@
+# --- Dependencies ---
+/vendor/
+composer.lock
+
+# --- Security & Configs (CRITICAL) ---
+.env
+/config/db.php
+/config/*.local.php
+/config/credentials.json
+
+# --- Logs & Temporary Files ---
+/logs/
+/tmp/
+/cache/
+*.log
+*.sql
+*.sqlite
+
+# --- System & IDE Files ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.project
