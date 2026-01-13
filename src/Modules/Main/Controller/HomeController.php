@@ -8,12 +8,16 @@
  */
 declare(strict_types=1);
 
-namespace Modestox\Controller;
+namespace Modestox\Modules\Main;
+
+namespace Modestox\Modules\Main\Controller;
+
+use Modestox\Controller\BaseController;
 
 class HomeController extends BaseController
 {
     public function index(): void
     {
-        $this->render("<h1>Welcome to Modestox</h1><p>The system is running on PHP 8.3.</p>");
+        $this->render("<h1>Welcome to Modestox</h1><p>Hybrid Modular Engine is running.</p>");
     }
 }
