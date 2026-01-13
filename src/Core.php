@@ -8,11 +8,17 @@
  */
 declare(strict_types=1);
 
-define('MODESTOX_ACCESS', true);
+namespace Modestox;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+if (!defined('MODESTOX_ACCESS')) {
+    die('Direct access denied.');
+}
 
-use Modestox\Core;
-
-$app = new Core();
-$app->run();
+class Core
+{
+    public function run(): void
+    {
+        $router = new Router();
+        $router->resolve();
+    }
+}

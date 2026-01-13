@@ -2,6 +2,9 @@
 /vendor/
 composer.lock
 
+# Open Server Panel 6 settings
+/.osp/
+
 # --- Security & Configs (CRITICAL) ---
 .env
 /config/db.php

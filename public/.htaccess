@@ -1,0 +1,23 @@
+# Disable directory browsing for security reasons
+Options -Indexes
+
+# Set the default character encoding to UTF-8
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    # Enable the runtime rewriting engine
+    RewriteEngine On
+
+    # Define the base URL for rewrites (root of the public folder)
+    RewriteBase /
+
+    # Condition: If the requested filename is NOT an existing file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # Condition: If the requested filename is NOT an existing directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # RULE: Forward all other requests to index.php
+    # [L] - Stop processing further rules if this one matches
+    # [QSA] - Append any existing query string parameters (e.g., ?id=1)
+    RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>

@@ -8,11 +8,12 @@
  */
 declare(strict_types=1);
 
-define('MODESTOX_ACCESS', true);
+namespace Modestox\Controller;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-use Modestox\Core;
-
-$app = new Core();
-$app->run();
+class HomeController extends BaseController
+{
+    public function index(): void
+    {
+        $this->render("<h1>Welcome to Modestox</h1><p>The system is running on PHP 8.3.</p>");
+    }
+}
