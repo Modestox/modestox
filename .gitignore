@@ -1,23 +1,33 @@
 # --- Dependencies ---
 /vendor/
-composer.lock
+# composer.lock - REMOVED (should be committed in projects)
 
-# Open Server Panel 6 settings
+# --- Open Server Panel 6 settings ---
 /.osp/
 
-# --- Security & Configs (CRITICAL) ---
+# --- Security & Configs ---
 .env
 /config/db.php
 /config/*.local.php
 /config/credentials.json
 
-# --- Logs & Temporary Files ---
-/logs/
-/tmp/
-/cache/
+# --- Modestox System Files (var) ---
+/var/cache/*
+/var/log/*
+/var/tmp/*
+!/var/cache/.gitkeep
+!/var/log/.gitkeep
+!/var/tmp/.gitkeep
+
+# --- Logs & SQL ---
 *.log
 *.sql
 *.sqlite
+
+# --- Public Assets (Uploads/Generated) ---
+/public/media/*
+/public/static/dist/*
+!/public/media/.gitkeep
 
 # --- System & IDE Files ---
 .DS_Store
@@ -25,3 +35,5 @@ Thumbs.db
 .idea/
 .vscode/
 .project
+.phpstorm.meta.php/
+_ide_helper.php
