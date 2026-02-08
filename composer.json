@@ -1,5 +1,5 @@
 {
-    "name": "modestox/modestox",
+    "name": "modestox/core",
     "description": "Modestox open-source e-commerce platform.",
     "type": "project",
     "license": "AGPL-3.0-or-later",
@@ -9,13 +9,18 @@
         }
     ],
     "require": {
-        "php": ">=8.3"
+        "php": ">=8.3",
+        "psr/container": "^2.0",
+        "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {
-            "Core\\": "src/",
-            "Modestox\\": "app/modules/Modestox/"
-        }
+            "Core\\": "app/",
+            "Modules\\": "modules/"
+        },
+        "files": [
+            "app/Shared/functions.php"
+        ]
     },
     "config": {
         "platform": {
